@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --color-emerald-luxury: #0F3D2E;
+  --color-emerald-luxury-dark: #0A2B20;
+  --color-navy-luxury: #0B1B3D;
+  --color-gold-luxury: #D4AF37;
+  --color-gold-luxury-dark: #C5A028;
+  --color-misty-gray: #F5F7F6;
+  --color-misty-border: #E8ECE9;
+  
+  --font-serif: "Cinzel", "Playfair Display", Georgia, serif;
+  --font-sans: "Montserrat", "Inter", system-ui, sans-serif;
+}
+
+@layer utilities {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom luxury glassmorphism */
+  .glass-luxury {
+    background: rgba(11, 27, 61, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(212, 175, 55, 0.15);
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(15, 61, 46, 0.08);
+  }
+
+  .glass-card-dark {
+    background: rgba(15, 61, 46, 0.9);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  /* Elegant scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F5F7F6;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0F3D2E;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #D4AF37;
+  }
+
+  /* Subtle animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes pulseGold {
+    0%, 100% {
+      border-color: rgba(212, 175, 55, 0.4);
+      box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.2);
+    }
+    50% {
+      border-color: rgba(212, 175, 55, 0.8);
+      box-shadow: 0 0 12px 2px rgba(212, 175, 55, 0.4);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  .pulse-gold {
+    animation: pulseGold 3s infinite ease-in-out;
+  }
+
+  /* Custom gold text glow */
+  .text-glow-gold {
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-misty-gray);
+  color: #1A302B;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
