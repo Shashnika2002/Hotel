@@ -772,19 +772,24 @@ function App() {
               </div>
               {/* END Contact Info Rows */}
 
-              {/* Google Maps Widget — standalone, outside contact info */}
-              <div className="mt-8 rounded-xl overflow-hidden border border-white/10 shadow-2xl w-full bg-white/5" style={{ height: '224px' }}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.534293816781!2d80.7634426!3d6.9461461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae380eb7501a357%3A0xe54e60ef2b79a0cf!2sAlben%20Castle%20Glenfall!5e0!3m2!1sen!2slk!4v1717415000000!5m2!1sen!2slk"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Alben Castle Glenfall Google Map location"
-                />
-              </div>
+              {/* View on Google Maps — link button */}
+              <a
+                href="https://maps.app.goo.gl/9DqfQo6yGvRjWzUz7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-gold-luxury/40 hover:bg-white/10 transition-all duration-300 group"
+              >
+                <div className="p-3 rounded-xl bg-gold-luxury/10 border border-gold-luxury/20 text-gold-luxury shrink-0 group-hover:bg-gold-luxury/20 transition-all duration-300">
+                  <Map size={20} />
+                </div>
+                <div>
+                  <p className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-0.5">Get Directions</p>
+                  <span className="text-sm text-white/90 group-hover:text-gold-luxury transition-colors duration-300">
+                    View Location on Google Maps
+                  </span>
+                </div>
+                <ExternalLink size={14} className="ml-auto text-white/30 group-hover:text-gold-luxury transition-colors duration-300 shrink-0" />
+              </a>
 
             </div>
             {/* END LEFT COLUMN */}
