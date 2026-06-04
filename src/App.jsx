@@ -680,12 +680,12 @@ function App() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-            {/* ── LEFT COLUMN: Contact Details + Map ── */}
-            <div className="flex flex-col gap-6">
+            {/* ── LEFT COLUMN: Contact Details ── */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
 
-              {/* Logo + Title */}
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full overflow-hidden border border-gold-luxury/30">
+              {/* Logo + Brand */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full overflow-hidden border border-gold-luxury/30 shrink-0">
                   <img src="/Logo/logo.jpg" alt="Alben Castle Logo" className="w-full h-full object-cover" />
                 </div>
                 <span className="font-serif text-lg tracking-widest text-gold-luxury">ALBEN CASTLE GLENFALL</span>
@@ -701,14 +701,14 @@ function App() {
                 </p>
               </div>
 
-              {/* Social Media Icons */}
+              {/* Social Icons */}
               <div className="flex items-center gap-3">
                 <a
                   href="https://facebook.com/your-page"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Alben Castle Glenfall on Facebook"
-                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300 hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]"
+                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -719,7 +719,7 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Alben Castle Glenfall on Instagram"
-                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300 hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]"
+                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -729,12 +729,12 @@ function App() {
                 </a>
               </div>
 
-              {/* Contact Info Rows */}
-              <div className="flex flex-col gap-6">
+              {/* ── Contact Info Items ── */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '1.5rem' }}>
 
                 {/* Location */}
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '1rem' }}>
+                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury" style={{ flexShrink: 0 }}>
                     <MapPin size={20} />
                   </div>
                   <div>
@@ -744,52 +744,60 @@ function App() {
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '1rem' }}>
+                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury" style={{ flexShrink: 0 }}>
                     <Mail size={20} />
                   </div>
                   <div>
                     <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Email Address</h4>
-                    <a href="mailto:albencastle@gmail.com" className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300">
+                    <a
+                      href="mailto:albencastle@gmail.com"
+                      className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300"
+                    >
                       albencastle@gmail.com
                     </a>
                   </div>
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
+                <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', gap: '1rem' }}>
+                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury" style={{ flexShrink: 0 }}>
                     <Phone size={20} />
                   </div>
                   <div>
                     <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Call / WhatsApp</h4>
-                    <a href="tel:+94703169000" className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300 block">
+                    <a
+                      href="tel:+94703169000"
+                      className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300"
+                      style={{ display: 'block' }}
+                    >
                       +94 70 316 9000
                     </a>
                   </div>
                 </div>
 
-              </div>
-              {/* END Contact Info Rows */}
+                {/* View on Google Maps */}
+                <a
+                  href="https://maps.app.goo.gl/9DqfQo6yGvRjWzUz7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-gold-luxury/40 hover:bg-white/10 transition-all duration-300 group"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <div className="p-3 rounded-xl bg-gold-luxury/10 border border-gold-luxury/20 text-gold-luxury" style={{ flexShrink: 0 }}>
+                    <Map size={20} />
+                  </div>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <p className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-0.5">Get Directions</p>
+                    <span className="text-sm text-white/90 group-hover:text-gold-luxury transition-colors duration-300">
+                      View Location on Google Maps
+                    </span>
+                  </div>
+                  <ExternalLink size={14} className="text-white/30 group-hover:text-gold-luxury transition-colors duration-300" style={{ flexShrink: 0 }} />
+                </a>
 
-              {/* View on Google Maps — link button */}
-              <a
-                href="https://maps.app.goo.gl/9DqfQo6yGvRjWzUz7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 p-4 rounded-xl bg-white/5 border border-white/10 hover:border-gold-luxury/40 hover:bg-white/10 transition-all duration-300 group"
-              >
-                <div className="p-3 rounded-xl bg-gold-luxury/10 border border-gold-luxury/20 text-gold-luxury shrink-0 group-hover:bg-gold-luxury/20 transition-all duration-300">
-                  <Map size={20} />
-                </div>
-                <div>
-                  <p className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-0.5">Get Directions</p>
-                  <span className="text-sm text-white/90 group-hover:text-gold-luxury transition-colors duration-300">
-                    View Location on Google Maps
-                  </span>
-                </div>
-                <ExternalLink size={14} className="ml-auto text-white/30 group-hover:text-gold-luxury transition-colors duration-300 shrink-0" />
-              </a>
+              </div>
+              {/* ── END Contact Info Items ── */}
 
             </div>
             {/* END LEFT COLUMN */}
