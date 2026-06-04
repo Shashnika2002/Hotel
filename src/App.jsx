@@ -681,24 +681,27 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
             {/* Contact details and Address */}
-            <div className="flex flex-col gap-8">
-              <div>
-                <div className="flex items-center gap-2 mb-4">
+            <div className="flex flex-col gap-12 justify-between">
+              <div className="flex flex-col gap-6">
+                {/* Logo and Title */}
+                <div className="flex items-center gap-2 mb-2">
                   <div className="w-10 h-10 rounded-full overflow-hidden border border-gold-luxury/30">
                     <img src="/Logo/logo.jpg" alt="Alben Castle Logo" className="w-full h-full object-cover" />
                   </div>
                   <span className="font-serif text-lg tracking-widest text-gold-luxury">ALBEN CASTLE GLENFALL</span>
                 </div>
 
-                <h2 className="font-serif text-4xl font-bold tracking-tight text-white mb-6">
-                  Get in Touch
-                </h2>
-                <p className="text-white/80 max-w-md font-light leading-relaxed mb-6">
-                  Plan your dream mountain getaway. Send us a message or call directly for reservations, event bookings, and bespoke services.
-                </p>
+                <div>
+                  <h2 className="font-serif text-4xl font-bold tracking-tight text-white mb-4">
+                    Get in Touch
+                  </h2>
+                  <p className="text-white/80 max-w-md font-light leading-relaxed">
+                    Plan your dream mountain getaway. Send us a message or call directly for reservations, event bookings, and bespoke services.
+                  </p>
+                </div>
 
                 {/* Social Media Icons */}
-                <div className="flex items-center gap-3 mb-8">
+                <div className="flex items-center gap-3">
                   <a
                     href="https://facebook.com/your-page"
                     target="_blank"
@@ -725,7 +728,8 @@ function App() {
                   </a>
                 </div>
 
-                <div className="space-y-6">
+                {/* Contact Info List */}
+                <div className="space-y-6 mt-2">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
                       <MapPin size={20} />
@@ -763,7 +767,7 @@ function App() {
               </div>
 
               {/* Embedded Google Maps Widget */}
-              <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl min-h-[14rem] relative bg-white/5">
+              <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl h-56 w-full relative bg-white/5 shrink-0 mt-4 lg:mt-0">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.534293816781!2d80.7634426!3d6.9461461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae380eb7501a357%3A0xe54e60ef2b79a0cf!2sAlben%20Castle%20Glenfall!5e0!3m2!1sen!2slk!4v1717415000000!5m2!1sen!2slk"
                   width="100%"
@@ -775,7 +779,6 @@ function App() {
                   title="Alben Castle Glenfall Google Map location"
                 />
               </div>
-
             </div>
 
             {/* Simple Contact Form */}
