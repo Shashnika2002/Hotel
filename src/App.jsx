@@ -680,94 +680,100 @@ function App() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
-            {/* Contact details and Address */}
-            <div className="flex flex-col gap-12 justify-between">
-              <div className="flex flex-col gap-6">
-                {/* Logo and Title */}
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-10 h-10 rounded-full overflow-hidden border border-gold-luxury/30">
-                    <img src="/Logo/logo.jpg" alt="Alben Castle Logo" className="w-full h-full object-cover" />
-                  </div>
-                  <span className="font-serif text-lg tracking-widest text-gold-luxury">ALBEN CASTLE GLENFALL</span>
+            {/* ── LEFT COLUMN: Contact Details + Map ── */}
+            <div className="flex flex-col gap-6">
+
+              {/* Logo + Title */}
+              <div className="flex items-center gap-2">
+                <div className="w-10 h-10 rounded-full overflow-hidden border border-gold-luxury/30">
+                  <img src="/Logo/logo.jpg" alt="Alben Castle Logo" className="w-full h-full object-cover" />
                 </div>
-
-                <div>
-                  <h2 className="font-serif text-4xl font-bold tracking-tight text-white mb-4">
-                    Get in Touch
-                  </h2>
-                  <p className="text-white/80 max-w-md font-light leading-relaxed">
-                    Plan your dream mountain getaway. Send us a message or call directly for reservations, event bookings, and bespoke services.
-                  </p>
-                </div>
-
-                {/* Social Media Icons */}
-                <div className="flex items-center gap-3">
-                  <a
-                    href="https://facebook.com/your-page"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Alben Castle Glenfall on Facebook"
-                    className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300 hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                    </svg>
-                  </a>
-                  <a
-                    href="https://instagram.com/your-profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Alben Castle Glenfall on Instagram"
-                    className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300 hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                    </svg>
-                  </a>
-                </div>
-
-                {/* Contact Info List */}
-                <div className="space-y-6 mt-2">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
-                      <MapPin size={20} />
-                    </div>
-                    <div>
-                      <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Our Location</h4>
-                      <p className="text-sm text-white/90">39, Glenfall road, Nuwara Eliya, Sri Lanka.</p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
-                      <Mail size={20} />
-                    </div>
-                    <div>
-                      <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Email Address</h4>
-                      <a href="mailto:albencastle@gmail.com" className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300">
-                        albencastle@gmail.com
-                      </a>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
-                      <Phone size={20} />
-                    </div>
-                    <div>
-                      <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Call / WhatsApp</h4>
-                      <a href="tel:+94703169000" className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300 block">
-                        +94 70 316 9000
-                      </a>
-                    </div>
-                  </div>
-                </div>
+                <span className="font-serif text-lg tracking-widest text-gold-luxury">ALBEN CASTLE GLENFALL</span>
               </div>
 
-              {/* Embedded Google Maps Widget */}
-              <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl h-56 w-full relative bg-white/5 shrink-0 mt-4 lg:mt-0">
+              {/* Heading + Description */}
+              <div>
+                <h2 className="font-serif text-4xl font-bold tracking-tight text-white mb-4">
+                  Get in Touch
+                </h2>
+                <p className="text-white/80 max-w-md font-light leading-relaxed">
+                  Plan your dream mountain getaway. Send us a message or call directly for reservations, event bookings, and bespoke services.
+                </p>
+              </div>
+
+              {/* Social Media Icons */}
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://facebook.com/your-page"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Alben Castle Glenfall on Facebook"
+                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300 hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://instagram.com/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Alben Castle Glenfall on Instagram"
+                  className="w-11 h-11 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 text-white hover:bg-amber-500 hover:text-slate-950 hover:border-amber-500 transition-all duration-300 hover:shadow-[0_0_12px_rgba(245,158,11,0.35)]"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                  </svg>
+                </a>
+              </div>
+
+              {/* Contact Info Rows */}
+              <div className="flex flex-col gap-6">
+
+                {/* Location */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
+                    <MapPin size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Our Location</h4>
+                    <p className="text-sm text-white/90">39, Glenfall road, Nuwara Eliya, Sri Lanka.</p>
+                  </div>
+                </div>
+
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
+                    <Mail size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Email Address</h4>
+                    <a href="mailto:albencastle@gmail.com" className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300">
+                      albencastle@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                {/* Phone */}
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-white/5 border border-white/10 text-gold-luxury shrink-0">
+                    <Phone size={20} />
+                  </div>
+                  <div>
+                    <h4 className="text-xs uppercase tracking-widest text-gold-luxury/70 font-semibold mb-1">Call / WhatsApp</h4>
+                    <a href="tel:+94703169000" className="text-sm text-white/90 hover:text-gold-luxury transition-colors duration-300 block">
+                      +94 70 316 9000
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+              {/* END Contact Info Rows */}
+
+              {/* Google Maps Widget — standalone, outside contact info */}
+              <div className="mt-8 rounded-xl overflow-hidden border border-white/10 shadow-2xl w-full bg-white/5" style={{ height: '224px' }}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.534293816781!2d80.7634426!3d6.9461461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae380eb7501a357%3A0xe54e60ef2b79a0cf!2sAlben%20Castle%20Glenfall!5e0!3m2!1sen!2slk!4v1717415000000!5m2!1sen!2slk"
                   width="100%"
@@ -779,11 +785,13 @@ function App() {
                   title="Alben Castle Glenfall Google Map location"
                 />
               </div>
-            </div>
 
-            {/* Simple Contact Form */}
+            </div>
+            {/* END LEFT COLUMN */}
+
+            {/* ── RIGHT COLUMN: Contact Form ── */}
             <div className="p-8 md:p-10 rounded-2xl bg-white/5 border border-white/10 shadow-2xl relative">
-              <h3 className="font-serif text-2xl font-semibold mb-6">Reservation & Inquiries</h3>
+              <h3 className="font-serif text-2xl font-semibold mb-6">Reservation &amp; Inquiries</h3>
 
               {formSubmitted ? (
                 <div className="h-64 flex flex-col justify-center items-center text-center p-6 bg-emerald-900/40 rounded-xl border border-emerald-500/30">
@@ -844,8 +852,10 @@ function App() {
                 </form>
               )}
             </div>
+            {/* END RIGHT COLUMN */}
 
           </div>
+          {/* END GRID */}
 
           {/* Footer Bottom copyright */}
           <div className="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/50">
