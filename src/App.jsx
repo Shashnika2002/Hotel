@@ -681,7 +681,7 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
 
             {/* Contact details and Address */}
-            <div className="flex flex-col justify-between">
+            <div className="flex flex-col gap-8">
               <div>
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-10 h-10 rounded-full overflow-hidden border border-gold-luxury/30">
@@ -763,7 +763,7 @@ function App() {
               </div>
 
               {/* Embedded Google Maps Widget */}
-              <div className="mt-12 rounded-xl overflow-hidden border border-white/10 shadow-2xl h-56 relative bg-white/5">
+              <div className="rounded-xl overflow-hidden border border-white/10 shadow-2xl min-h-[14rem] relative bg-white/5">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.534293816781!2d80.7634426!3d6.9461461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae380eb7501a357%3A0xe54e60ef2b79a0cf!2sAlben%20Castle%20Glenfall!5e0!3m2!1sen!2slk!4v1717415000000!5m2!1sen!2slk"
                   width="100%"
